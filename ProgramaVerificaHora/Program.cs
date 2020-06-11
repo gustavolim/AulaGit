@@ -75,6 +75,25 @@ namespace ProgramaVerificaHora
                 }
             }
 
+            if (horas != null)
+            {
+                int horario = Convert.ToInt32(string.Format("{0}{1}", horas[0], horas[1]));
+
+                if (horario <= 12)
+                {
+                    Console.WriteLine("Dia!");
+                }
+                else if (horario <= 18)
+                {
+                    Console.WriteLine("Tarde!");
+                }
+                else
+                {
+
+                    Console.WriteLine("Noite");
+                }
+            }
+
             Console.ReadLine();
         }
     }
